@@ -2,30 +2,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/blog.config": [
-        "./blog.config"
-      ],
-      "@/components/*": [
-        "components/*"
-      ],
-      "@/hooks/*": [
-        "hooks/*"
-      ],
-      "@/themes/*": [
-        "themes/*"
-      ],
-      "@/pages/*": [
-        "pages/*"
-      ],
-      "@/data/*": [
-        "data/*"
-      ],
-      "@/lib/*": [
-        "lib/*"
-      ],
-      "@/styles/*": [
-        "styles/*"
-      ]
+      "@/*": ["./*"],
+      "@/blog.config": ["./blog.config"],
+      "@/components/*": ["components/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/themes/*": ["themes/*"],
+      "@/pages/*": ["pages/*"],
+      "@/data/*": ["data/*"],
+      "@/lib/*": ["lib/*"],
+      "@/styles/*": ["styles/*"]
     },
     "lib": [
       "dom",
@@ -43,7 +28,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "forceConsistentCasingInFileNames": true
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false
   },
   "include": [
     "next-env.d.ts",
@@ -54,6 +51,7 @@
     ".eslintrc.js"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "public"
   ]
 }
